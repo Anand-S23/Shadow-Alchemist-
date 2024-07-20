@@ -1961,6 +1961,12 @@ layer_0/tile_data = PackedInt32Array(-917525, 0, 2, -917524, 65536, 2, -917523, 
 [node name="Chest" parent="." instance=ExtResource("3_p3syr")]
 position = Vector2(100, 10)
 
+[node name="Chest2" parent="." instance=ExtResource("3_p3syr")]
+position = Vector2(51, 8)
+
+[node name="Chest3" parent="." instance=ExtResource("3_p3syr")]
+position = Vector2(118, 10)
+
 [node name="Walls" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_od5r4")
 format = 2

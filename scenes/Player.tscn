@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bgmawtdq75t3t" path="res://assests/temp_asset_pack.png" id="1_271jb"]
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_wq220"]
-[ext_resource type="Script" path="res://scenes/Dynamic_Camera.gd" id="3_tg7xq"]
+[ext_resource type="Script" path="res://scripts/Dynamic_Camera.gd" id="3_8omc6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_buptb"]
 atlas = ExtResource("1_271jb")
@@ -22,7 +22,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x3a8x"]
 size = Vector2(10, 15)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+collision_layer = 2
 script = ExtResource("1_wq220")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -37,4 +38,4 @@ shape = SubResource("RectangleShape2D_x3a8x")
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true
 position_smoothing_speed = 2.0
-script = ExtResource("3_tg7xq")
+script = ExtResource("3_8omc6")
