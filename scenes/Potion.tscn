@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://nc5uh5ma6hp3"]
+
+[ext_resource type="Texture2D" uid="uid://bgmawtdq75t3t" path="res://assests/temp_asset_pack.png" id="1_1jdv8"]
+[ext_resource type="Script" path="res://scripts/Potion.gd" id="1_nx7h3"]
+[ext_resource type="PackedScene" uid="uid://ggq3fennnku3" path="res://scenes/Interactable.tscn" id="3_ja8w8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ammsv"]
+atlas = ExtResource("1_1jdv8")
+region = Rect2(192, 208, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_emgog"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ammsv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2mo55"]
+size = Vector2(9, 11)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b5vru"]
+radius = 18.0278
+
+[node name="Potion" type="StaticBody2D"]
+script = ExtResource("1_nx7h3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_emgog")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 1.5)
+shape = SubResource("RectangleShape2D_2mo55")
+
+[node name="Interactable" parent="." instance=ExtResource("3_ja8w8")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+shape = SubResource("CircleShape2D_b5vru")
