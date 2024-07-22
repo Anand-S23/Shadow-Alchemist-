@@ -36,6 +36,7 @@ position = Vector2(0.5, 1.5)
 shape = SubResource("RectangleShape2D_2mo55")
 
 [node name="Interactable" parent="." instance=ExtResource("3_ja8w8")]
+item_name = "Potion"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
 shape = SubResource("CircleShape2D_b5vru")
