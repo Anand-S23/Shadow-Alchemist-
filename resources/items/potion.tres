@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://b8p4hu1awwmby"]
+
+[ext_resource type="Texture2D" uid="uid://bbma1quwpboju" path="res://assests/potion.png" id="1_0y7b5"]
+[ext_resource type="Script" path="res://scripts/Item.gd" id="2_2oqpj"]
+
+[resource]
+script = ExtResource("2_2oqpj")
+icon = ExtResource("1_0y7b5")
+name = "Potion"

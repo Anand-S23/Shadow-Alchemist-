@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://ksb4furg8dwi"]
+
+[ext_resource type="Script" path="res://scripts/HotBar.gd" id="1_20nhb"]
+[ext_resource type="PackedScene" uid="uid://ciobp8xm1m847" path="res://scenes/Slot.tscn" id="1_dkaxm"]
+
+[node name="HotBar" type="VBoxContainer"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -33.0
+offset_top = -60.0
+offset_right = -1.0
+offset_bottom = -28.0
+grow_horizontal = 0
+grow_vertical = 2
+alignment = 1
+script = ExtResource("1_20nhb")
+
+[node name="Slot" parent="." instance=ExtResource("1_dkaxm")]
+layout_mode = 2

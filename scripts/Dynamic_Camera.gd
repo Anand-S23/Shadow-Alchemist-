@@ -8,8 +8,15 @@ const SCROLL_SPEED = 0.4
 var target_distace := 0
 var center_pos := position
 var zoom_pos := 4.0
+@export var motion_enabled := true
 
 func _process(delta):
+	zoom_pos = clamp(zoom_pos, MIN_ZOOM, MAX_ZOOM)
+	zoom = Vector2(zoom_pos, zoom_pos)
+	
+	if !motion_enabled:
+		return
+	
 	var direction := center_pos.direction_to(get_local_mouse_position())
 	var target_pos := center_pos + direction * target_distace
 	
@@ -19,8 +26,7 @@ func _process(delta):
 	)
 	position = target_pos
 	
-	zoom_pos = clamp(zoom_pos, MIN_ZOOM, MAX_ZOOM)
-	zoom = Vector2(zoom_pos, zoom_pos)
+
 
 func _input(event):
 	if event is InputEventMouseMotion:

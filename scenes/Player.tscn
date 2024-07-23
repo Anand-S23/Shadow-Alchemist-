@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dpg6kbw4ddopd"]
+[gd_scene load_steps=8 format=3 uid="uid://dpg6kbw4ddopd"]
 
 [ext_resource type="Texture2D" uid="uid://bgmawtdq75t3t" path="res://assests/temp_asset_pack.png" id="1_271jb"]
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_wq220"]
 [ext_resource type="Script" path="res://scripts/Dynamic_Camera.gd" id="3_8omc6"]
+[ext_resource type="PackedScene" uid="uid://ksb4furg8dwi" path="res://scenes/HotBar.tscn" id="3_winfm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_buptb"]
 atlas = ExtResource("1_271jb")
@@ -33,6 +34,15 @@ sprite_frames = SubResource("SpriteFrames_5q8yn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_x3a8x")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HotBar" parent="CanvasLayer" instance=ExtResource("3_winfm")]
+offset_left = -79.0
+offset_top = -46.0
+offset_right = -47.0
+offset_bottom = -14.0
+scale = Vector2(2, 2)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)

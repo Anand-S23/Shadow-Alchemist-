@@ -1,6 +1,6 @@
 extends Node2D
 
-const LABEL_OFFSET = 36
+const LABEL_OFFSET = 24
 
 @onready var player = get_tree().get_first_node_in_group("player")
 @onready var label = $Label
