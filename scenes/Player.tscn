@@ -49,3 +49,4 @@ zoom = Vector2(4, 4)
 position_smoothing_enabled = true
 position_smoothing_speed = 2.0
 script = ExtResource("3_8omc6")
+motion_enabled = false

@@ -25,5 +25,8 @@ func add_item(item):
 			slot.item = item
 			return
 
+func drop_item():
+	slots[current_index].item = null
+
 func get_item() -> Item:
 	return slots[current_index].item

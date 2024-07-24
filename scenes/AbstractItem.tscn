@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://b02m2jdycavg2"]
+
+[ext_resource type="Script" path="res://scripts/AbstractItem.gd" id="1_gldnd"]
+[ext_resource type="PackedScene" uid="uid://ggq3fennnku3" path="res://scenes/Interactable.tscn" id="2_nbvme"]
+
+[sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_uo0af"]
+length = 0.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qif28"]
+radius = 17.0294
+
+[node name="AbstractItem" type="StaticBody2D"]
+script = ExtResource("1_gldnd")
+
+[node name="ItemSprite" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("SeparationRayShape2D_uo0af")
+
+[node name="Interactable" parent="." instance=ExtResource("2_nbvme")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+shape = SubResource("CircleShape2D_qif28")

@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbmowjfiyquh1"]
+
+[ext_resource type="Script" path="res://scripts/MG_SpamClick.gd" id="1_arctt"]
+[ext_resource type="Texture2D" uid="uid://cef8mf1v6jc75" path="res://assests/wood.png" id="2_oax7u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cylts"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kqqsl"]
+bg_color = Color(0.102046, 0.721651, 0.232043, 1)
+
+[node name="SpamClickMiniGame" type="Node2D"]
+script = ExtResource("1_arctt")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -415.0
+offset_top = -415.0
+offset_right = 415.0
+offset_bottom = 415.0
+texture = ExtResource("2_oax7u")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -249.0
+offset_top = 216.0
+offset_right = 251.0
+offset_bottom = 246.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_cylts")
+theme_override_styles/fill = SubResource("StyleBoxFlat_kqqsl")
+show_percentage = false
+
+[node name="DecreaseTimer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="DecreaseTimer" to="." method="_on_decrease_timer_timeout"]

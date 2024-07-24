@@ -40,5 +40,13 @@ func _input(event):
 			
 			await active_areas[0].interact.call()
 			can_interact = true
-	
+	elif event.is_action_pressed("pickup"):
+		if active_areas.size() > 0:
+			can_interact = false
+			label.hide()
+			
+			await active_areas[0].pickup.call()
+			can_interact = true
+	elif event.is_action_pressed("drop"):
+		player.drop_item()
 	
