@@ -3,7 +3,6 @@ extends Node2D
 @onready var progress = $ProgressBar
 @onready var decrease_timer = $DecreaseTimer
 
-
 var value := 0
 
 func _process(delta):

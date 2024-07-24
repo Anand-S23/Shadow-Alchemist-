@@ -8,9 +8,7 @@ extends Button
 		item = value
 		if value != null:
 			var texture_path = value.icon.resource_path
-			print("Texture Path: ", texture_path)  # Debug print
 			button_icon.texture = load(texture_path)
-			print("SETTING NOW!")
 		else:
 			button_icon.texture = null
 

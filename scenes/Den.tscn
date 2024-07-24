@@ -1,11 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://cg51vtqr7bqnv"]
+[gd_scene load_steps=13 format=3 uid="uid://cg51vtqr7bqnv"]
 
 [ext_resource type="Texture2D" uid="uid://bgmawtdq75t3t" path="res://assests/temp_asset_pack.png" id="1_dx71g"]
 [ext_resource type="PackedScene" uid="uid://dpg6kbw4ddopd" path="res://scenes/Player.tscn" id="2_84fpk"]
-[ext_resource type="PackedScene" uid="uid://bvmigr2xltkaa" path="res://scenes/MG_Potion.tscn" id="3_8p6j1"]
 [ext_resource type="PackedScene" uid="uid://c1ek4klknhvv1" path="res://scenes/MiniGameManager.tscn" id="4_p5chk"]
 [ext_resource type="PackedScene" uid="uid://b02m2jdycavg2" path="res://scenes/AbstractItem.tscn" id="4_wput2"]
 [ext_resource type="Resource" uid="uid://b8p4hu1awwmby" path="res://resources/items/potion.tres" id="5_obip1"]
+[ext_resource type="PackedScene" uid="uid://ctir3rulkdkxj" path="res://scenes/Chest.tscn" id="5_ywis5"]
+[ext_resource type="PackedScene" uid="uid://nc5uh5ma6hp3" path="res://scenes/Potion.tscn" id="6_sbj14"]
+[ext_resource type="PackedScene" uid="uid://dqpxwl54pys7r" path="res://scenes/TestCharacter.tscn" id="7_sl3b7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e6f1n"]
 texture = ExtResource("1_dx71g")
@@ -1313,11 +1315,28 @@ layer_0/tile_data = PackedInt32Array(-1048595, 262144, 6, -983059, 262144, 6, -9
 
 [node name="Items" type="Node" parent="." groups=["item_container"]]
 
-[node name="Potion" parent="Items" instance=ExtResource("3_8p6j1")]
+[node name="NPC" parent="Items" instance=ExtResource("7_sl3b7")]
+position = Vector2(234, 116)
 
 [node name="AbstractItem" parent="Items" instance=ExtResource("4_wput2")]
 position = Vector2(-83, 43)
 item = ExtResource("5_obip1")
+
+[node name="AbstractItem2" parent="Items" instance=ExtResource("4_wput2")]
+position = Vector2(-111, 43)
+item = ExtResource("5_obip1")
+
+[node name="Chest" parent="Items" instance=ExtResource("5_ywis5")]
+position = Vector2(43, -41)
+
+[node name="Chest2" parent="Items" instance=ExtResource("5_ywis5")]
+position = Vector2(60, -41)
+
+[node name="Chest3" parent="Items" instance=ExtResource("5_ywis5")]
+position = Vector2(93, -15)
+
+[node name="Potion" parent="Items" instance=ExtResource("6_sbj14")]
+position = Vector2(-110, -49)
 
 [node name="Player" parent="." instance=ExtResource("2_84fpk")]
 z_index = 10

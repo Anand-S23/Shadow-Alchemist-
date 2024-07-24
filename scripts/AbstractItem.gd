@@ -13,5 +13,7 @@ func _ready():
 	interactable.pickup = Callable(self, "_on_interact")
 
 func _on_interact():
-	player.add_item(item)
-	queue_free()
+	var current_item: Item = player.get_item()
+	if current_item == null:
+		player.add_item(item)
+		queue_free()

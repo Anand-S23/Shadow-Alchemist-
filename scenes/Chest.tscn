@@ -106,6 +106,7 @@ size = Vector2(16, 8)
 radius = 28.0179
 
 [node name="Chest" type="StaticBody2D"]
+z_index = 20
 script = ExtResource("1_betjm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -118,7 +119,7 @@ position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_l1m5f")
 
 [node name="Interactable" parent="." instance=ExtResource("2_3jjf6")]
-item_name = "Chest"
+item_name = "[E] Chest"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
 shape = SubResource("CircleShape2D_jckxk")

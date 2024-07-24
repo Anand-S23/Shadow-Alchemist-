@@ -13,7 +13,6 @@ func activate():
 	visible = true
 	mini_game_instance = test_scene.instantiate()
 	mini_game_instance.position += (mg_rect_size / 2)
-	print(mg_container.global_position, mg_container.position, mini_game_instance.global_position)
 	mg_container.add_child(mini_game_instance)
 
 func deactivate():
@@ -26,6 +25,3 @@ func is_active():
 func _ready():
 	visible = false
 
-func _on_game_completed():
-	print("we here")
-	deactivate()
