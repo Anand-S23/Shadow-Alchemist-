@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://dt5nd5l8b3ao1"]
+
+[ext_resource type="PackedScene" uid="uid://ciobp8xm1m847" path="res://scenes/Slot.tscn" id="1_h7s4r"]
+[ext_resource type="Script" path="res://scripts/RecipeSlot.gd" id="1_ub34q"]
+[ext_resource type="Texture2D" uid="uid://brmvtcoa21e1m" path="res://assests/Plus.png" id="2_16kc5"]
+[ext_resource type="Texture2D" uid="uid://dtemue1fonyko" path="res://assests/equal.png" id="3_on2d2"]
+
+[node name="RecipeSlot" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ub34q")
+
+[node name="SlotContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_right = 40.0
+alignment = 1
+
+[node name="IngredientContainer" type="VBoxContainer" parent="SlotContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Plus" type="TextureRect" parent="SlotContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("2_16kc5")
+stretch_mode = 3
+
+[node name="Instrument" parent="SlotContainer" instance=ExtResource("1_h7s4r")]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="SlotContainer"]
+layout_mode = 2
+texture = ExtResource("3_on2d2")
+stretch_mode = 3
+
+[node name="Output" parent="SlotContainer" instance=ExtResource("1_h7s4r")]
+layout_mode = 2
+size_flags_vertical = 4

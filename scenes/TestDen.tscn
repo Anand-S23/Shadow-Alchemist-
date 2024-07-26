@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bgmawtdq75t3t" path="res://assests/temp_asset_pack.png" id="1_ps664"]
 [ext_resource type="PackedScene" uid="uid://dpg6kbw4ddopd" path="res://scenes/Player.tscn" id="2_g3ppp"]
 [ext_resource type="PackedScene" uid="uid://dqpxwl54pys7r" path="res://scenes/TestCharacter.tscn" id="3_dkwi8"]
-[ext_resource type="PackedScene" uid="uid://nc5uh5ma6hp3" path="res://scenes/Potion.tscn" id="4_3pj42"]
+[ext_resource type="PackedScene" uid="uid://nc5uh5ma6hp3" path="res://Potion.tscn" id="4_3pj42"]
 [ext_resource type="Resource" uid="uid://b8p4hu1awwmby" path="res://resources/items/potion.tres" id="5_apjbd"]
 [ext_resource type="PackedScene" uid="uid://ctir3rulkdkxj" path="res://scenes/Chest.tscn" id="6_uu4ru"]
 

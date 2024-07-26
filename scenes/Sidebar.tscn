@@ -1,0 +1,86 @@
+[gd_scene load_steps=2 format=3 uid="uid://28e2tjv2gy6v"]
+
+[ext_resource type="PackedScene" uid="uid://du8wfdxncxq8t" path="res://scenes/Orders.tscn" id="1_eenia"]
+
+[node name="Sidebar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Frame" type="ColorRect" parent="UI"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -440.0
+offset_right = 340.0
+offset_bottom = 440.0
+grow_vertical = 2
+color = Color(0.289729, 0.158857, 9.62615e-08, 1)
+
+[node name="Background" type="ColorRect" parent="UI"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 9.0
+offset_top = -400.0
+offset_right = 332.0
+offset_bottom = 432.0
+grow_vertical = 2
+color = Color(0.171564, 0.0755457, 0.00113386, 1)
+
+[node name="Buttons" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 241.0
+offset_bottom = 648.0
+
+[node name="Button" type="Button" parent="UI/Buttons"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 9.0
+offset_top = -62.0
+offset_right = 95.0
+offset_bottom = -31.0
+grow_vertical = 2
+text = "[1] Orders"
+
+[node name="Button2" type="Button" parent="UI/Buttons"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -62.0
+offset_right = 69.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "[2] Recipes"
+
+[node name="MainContainer" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 9.0
+offset_top = -75.0
+offset_right = 331.0
+offset_bottom = 756.0
+
+[node name="Orders" parent="UI/MainContainer" instance=ExtResource("1_eenia")]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 11.0
+offset_top = -32.5
+offset_right = 311.0
+offset_bottom = 139.5
+grow_vertical = 2

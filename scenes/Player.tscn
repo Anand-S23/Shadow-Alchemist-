@@ -1,38 +1,62 @@
-[gd_scene load_steps=8 format=3 uid="uid://dpg6kbw4ddopd"]
+[gd_scene load_steps=10 format=3 uid="uid://dpg6kbw4ddopd"]
 
-[ext_resource type="Texture2D" uid="uid://bgmawtdq75t3t" path="res://assests/temp_asset_pack.png" id="1_271jb"]
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_wq220"]
+[ext_resource type="Texture2D" uid="uid://ba1olkb7ucmvq" path="res://assests/art/Sprites/mainchar/maincahrtpe1backstationary.png" id="2_mbb32"]
+[ext_resource type="Texture2D" uid="uid://kbmts0jvpk7y" path="res://assests/art/Sprites/mainchar/Mainchartype1walk1.png" id="3_8dgan"]
 [ext_resource type="Script" path="res://scripts/Dynamic_Camera.gd" id="3_8omc6"]
 [ext_resource type="PackedScene" uid="uid://ksb4furg8dwi" path="res://scenes/HotBar.tscn" id="3_winfm"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_buptb"]
-atlas = ExtResource("1_271jb")
-region = Rect2(64, 128, 16, 16)
+[ext_resource type="Texture2D" uid="uid://bym5hhqfaa0b8" path="res://assests/art/Sprites/mainchar/maintype1Lsidestationary.png" id="4_m0l5a"]
+[ext_resource type="Texture2D" uid="uid://kfdcn4jj5v6c" path="res://assests/art/Sprites/mainchar/maintype1Rsidestationary.png" id="5_nysjv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5q8yn"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_buptb")
+"texture": ExtResource("2_mbb32")
 }],
 "loop": true,
-"name": &"default",
+"name": &"back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8dgan")
+}],
+"loop": true,
+"name": &"front",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_m0l5a")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_nysjv")
+}],
+"loop": true,
+"name": &"right",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x3a8x"]
-size = Vector2(10, 15)
+size = Vector2(13, 27)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 collision_layer = 2
 script = ExtResource("1_wq220")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_5q8yn")
+animation = &"front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -0.5)
+position = Vector2(0.5, 1.5)
 shape = SubResource("RectangleShape2D_x3a8x")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -49,4 +73,3 @@ zoom = Vector2(4, 4)
 position_smoothing_enabled = true
 position_smoothing_speed = 2.0
 script = ExtResource("3_8omc6")
-motion_enabled = false
