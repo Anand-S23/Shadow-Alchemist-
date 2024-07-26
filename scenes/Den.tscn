@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b02m2jdycavg2" path="res://scenes/AbstractItem.tscn" id="4_wput2"]
 [ext_resource type="Resource" uid="uid://b8p4hu1awwmby" path="res://resources/items/potion.tres" id="5_obip1"]
 [ext_resource type="PackedScene" uid="uid://ctir3rulkdkxj" path="res://scenes/Chest.tscn" id="5_ywis5"]
-[ext_resource type="PackedScene" uid="uid://nc5uh5ma6hp3" path="res://Potion.tscn" id="6_sbj14"]
+[ext_resource type="PackedScene" uid="uid://nc5uh5ma6hp3" path="res://scenes/Potion.tscn" id="6_sbj14"]
 [ext_resource type="PackedScene" uid="uid://dqpxwl54pys7r" path="res://scenes/TestCharacter.tscn" id="7_sl3b7"]
 [ext_resource type="PackedScene" uid="uid://dt5nd5l8b3ao1" path="res://scenes/RecipeSlot.tscn" id="9_5t3xb"]
 [ext_resource type="Texture2D" uid="uid://tgud0asx554p" path="res://assests/art/Textures/chosenfloorandwalls/stonewallmossysidec.png" id="9_xs2ty"]
