@@ -6,17 +6,25 @@
 [ext_resource type="Texture2D" uid="uid://dtemue1fonyko" path="res://assests/equal.png" id="3_on2d2"]
 
 [node name="RecipeSlot" type="Control"]
+custom_minimum_size = Vector2(320, 40)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(2, 2)
 script = ExtResource("1_ub34q")
 
 [node name="SlotContainer" type="HBoxContainer" parent="."]
-layout_mode = 2
-offset_right = 40.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -72.0
+offset_right = 72.0
+offset_bottom = 32.0
+grow_horizontal = 2
 alignment = 1
 
 [node name="IngredientContainer" type="VBoxContainer" parent="SlotContainer"]

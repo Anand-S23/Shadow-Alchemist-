@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://72rvki25elsr"]
+
+[ext_resource type="Script" path="res://scripts/RecipieTab.gd" id="1_j5trk"]
+[ext_resource type="Resource" uid="uid://bh5b4pelp72ki" path="res://resources/recipies/test_potion_recipe.tres" id="2_bscry"]
+
+[node name="Recipies" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 320.0
+offset_bottom = 830.0
+script = ExtResource("1_j5trk")
+recipies = Array[Resource("res://scripts/Recipe.gd")]([ExtResource("2_bscry"), ExtResource("2_bscry"), ExtResource("2_bscry")])
+
+[node name="RecipeList" type="ScrollContainer" parent="."]
+layout_mode = 2
+offset_right = 320.0
+offset_bottom = 415.0
+
+[node name="ListContainer" type="VBoxContainer" parent="RecipeList"]
+layout_mode = 2
+
+[node name="RecipeView" type="ScrollContainer" parent="."]
+layout_mode = 2
+offset_top = 415.0
+offset_right = 320.0
+offset_bottom = 830.0
+
+[node name="ListContainer" type="VBoxContainer" parent="RecipeView"]
+layout_mode = 2

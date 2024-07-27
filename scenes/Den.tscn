@@ -1408,8 +1408,5 @@ offset_left = 104.0
 offset_top = -90.0
 offset_right = 104.0
 offset_bottom = -90.0
-ingredients = Array[Resource("res://scripts/Item.gd")]([ExtResource("5_obip1"), ExtResource("5_obip1")])
-instrument = ExtResource("5_obip1")
-output = ExtResource("5_obip1")
 
 [node name="Sidebar" parent="." instance=ExtResource("13_s28vb")]

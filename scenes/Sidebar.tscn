@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://28e2tjv2gy6v"]
+[gd_scene load_steps=4 format=3 uid="uid://28e2tjv2gy6v"]
 
 [ext_resource type="PackedScene" uid="uid://du8wfdxncxq8t" path="res://scenes/Orders.tscn" id="1_eenia"]
+[ext_resource type="Script" path="res://scripts/Sidebar.gd" id="1_nx8ws"]
+[ext_resource type="PackedScene" uid="uid://72rvki25elsr" path="res://scenes/RecipieTab.tscn" id="3_5j2t4"]
 
 [node name="Sidebar" type="Control"]
 layout_mode = 3
@@ -10,6 +12,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
+script = ExtResource("1_nx8ws")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -71,3 +74,10 @@ offset_bottom = 871.0
 layout_mode = 1
 offset_top = 5.0
 offset_bottom = 45.0
+
+[node name="Recipies" parent="UI/Container/MainContainer" instance=ExtResource("3_5j2t4")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="UI/Container/Buttons/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="UI/Container/Buttons/Button2" to="." method="_on_button_2_pressed"]

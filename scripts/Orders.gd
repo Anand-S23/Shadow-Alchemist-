@@ -14,7 +14,6 @@ var mod_value: int
 
 func _ready():
 	mod_value = max_gen_time - min_gen_time + 1
-	start()
 	
 func generate_order():
 	var random_recipe := recipies[(randi() % recipies.size())]
