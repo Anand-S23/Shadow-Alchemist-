@@ -4,11 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://cr01aw28o3883" path="res://scenes/CircularTimer.tscn" id="2_6s2mv"]
 
 [node name="Order" type="Control"]
-custom_minimum_size = Vector2(300, 40)
+custom_minimum_size = Vector2(250, 40)
 layout_mode = 3
 anchors_preset = 0
-offset_right = 300.0
+offset_right = 280.0
 offset_bottom = 40.0
+size_flags_horizontal = 8
 script = ExtResource("1_1satv")
 
 [node name="ItemImage" type="TextureRect" parent="."]
@@ -18,21 +19,13 @@ offset_bottom = 40.0
 
 [node name="ItemName" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.116
-anchor_right = 0.116
-offset_left = 12.2
-offset_right = 223.2
+offset_left = 40.0
+offset_right = 240.0
 offset_bottom = 40.0
-grow_horizontal = 2
 vertical_alignment = 1
 
 [node name="CircularTimer" parent="." instance=ExtResource("2_6s2mv")]
 layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -41.0
-offset_right = 259.0
-grow_horizontal = 0
+offset_left = 240.0
+offset_right = 540.0
 scale = Vector2(0.133, 0.133)

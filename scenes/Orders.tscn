@@ -1,31 +1,21 @@
-[gd_scene load_steps=6 format=3 uid="uid://du8wfdxncxq8t"]
+[gd_scene load_steps=3 format=3 uid="uid://du8wfdxncxq8t"]
 
-[ext_resource type="PackedScene" uid="uid://b76sijlakmeru" path="res://scenes/Order.tscn" id="1_bql5a"]
-[ext_resource type="Texture2D" uid="uid://cef8mf1v6jc75" path="res://assests/wood.png" id="2_jsjjc"]
-[ext_resource type="Texture2D" uid="uid://bbma1quwpboju" path="res://assests/potion.png" id="3_fugdw"]
-[ext_resource type="Texture2D" uid="uid://brmvtcoa21e1m" path="res://assests/Plus.png" id="4_gp82d"]
-[ext_resource type="Texture2D" uid="uid://dtemue1fonyko" path="res://assests/equal.png" id="5_lgdtx"]
+[ext_resource type="Script" path="res://scripts/Orders.gd" id="1_sq6lf"]
+[ext_resource type="Resource" uid="uid://bh5b4pelp72ki" path="res://resources/recipies/test_potion_recipe.tres" id="2_m5fdv"]
 
-[node name="Orders" type="VBoxContainer"]
-offset_right = 345.0
-offset_bottom = 128.0
+[node name="Orders" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_sq6lf")
+recipies = Array[Resource("res://scripts/Recipe.gd")]([ExtResource("2_m5fdv")])
 
-[node name="Order" parent="." instance=ExtResource("1_bql5a")]
-layout_mode = 2
-item_name = "Test Name"
-item_image = ExtResource("2_jsjjc")
+[node name="OrdersContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="Order2" parent="." instance=ExtResource("1_bql5a")]
-layout_mode = 2
-item_name = "Test Name"
-item_image = ExtResource("3_fugdw")
+[node name="Timer" type="Timer" parent="."]
 
-[node name="Order3" parent="." instance=ExtResource("1_bql5a")]
-layout_mode = 2
-item_name = "Test Name"
-item_image = ExtResource("4_gp82d")
-
-[node name="Order4" parent="." instance=ExtResource("1_bql5a")]
-layout_mode = 2
-item_name = "Test Name"
-item_image = ExtResource("5_lgdtx")
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

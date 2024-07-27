@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=4 format=3 uid="uid://bh5b4pelp72ki"]
+
+[ext_resource type="Texture2D" uid="uid://bbma1quwpboju" path="res://assests/potion.png" id="1_puqx0"]
+[ext_resource type="Script" path="res://scripts/Recipe.gd" id="2_5u5oh"]
+[ext_resource type="Resource" uid="uid://cfgev77ganw22" path="res://resources/steps/test_potion_steps/test_potion_step.tres" id="3_lqp45"]
+
+[resource]
+script = ExtResource("2_5u5oh")
+item_name = "Some Potion"
+item_image = ExtResource("1_puqx0")
+steps = Array[Resource("res://scripts/Step.gd")]([ExtResource("3_lqp45"), ExtResource("3_lqp45")])

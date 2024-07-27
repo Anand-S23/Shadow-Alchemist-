@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Step" load_steps=3 format=3 uid="uid://cfgev77ganw22"]
+
+[ext_resource type="Resource" uid="uid://b8p4hu1awwmby" path="res://resources/items/potion.tres" id="1_6jiqj"]
+[ext_resource type="Script" path="res://scripts/Step.gd" id="2_6jeqq"]
+
+[resource]
+script = ExtResource("2_6jeqq")
+ingredients = Array[Resource("res://scripts/Item.gd")]([ExtResource("1_6jiqj")])
+instrument = ExtResource("1_6jiqj")
+output = ExtResource("1_6jiqj")
