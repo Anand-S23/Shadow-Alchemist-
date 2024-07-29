@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://dpg6kbw4ddopd"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_wq220"]
-[ext_resource type="Texture2D" uid="uid://ba1olkb7ucmvq" path="res://assests/art/Sprites/mainchar/maincahrtpe1backstationary.png" id="2_mbb32"]
-[ext_resource type="Texture2D" uid="uid://kbmts0jvpk7y" path="res://assests/art/Sprites/mainchar/Mainchartype1walk1.png" id="3_8dgan"]
+[ext_resource type="Texture2D" uid="uid://ba1olkb7ucmvq" path="res://assests/art/Objects/Sprites/mainchar/maincahrtpe1backstationary.png" id="2_mbb32"]
+[ext_resource type="Texture2D" uid="uid://kbmts0jvpk7y" path="res://assests/art/Objects/Sprites/mainchar/Mainchartype1walk1.png" id="3_8dgan"]
 [ext_resource type="Script" path="res://scripts/Dynamic_Camera.gd" id="3_8omc6"]
 [ext_resource type="PackedScene" uid="uid://ksb4furg8dwi" path="res://scenes/HotBar.tscn" id="3_winfm"]
-[ext_resource type="Texture2D" uid="uid://bym5hhqfaa0b8" path="res://assests/art/Sprites/mainchar/maintype1Lsidestationary.png" id="4_m0l5a"]
-[ext_resource type="Texture2D" uid="uid://kfdcn4jj5v6c" path="res://assests/art/Sprites/mainchar/maintype1Rsidestationary.png" id="5_nysjv"]
+[ext_resource type="Texture2D" uid="uid://bym5hhqfaa0b8" path="res://assests/art/Objects/Sprites/mainchar/maintype1Lsidestationary.png" id="4_m0l5a"]
+[ext_resource type="Texture2D" uid="uid://kfdcn4jj5v6c" path="res://assests/art/Objects/Sprites/mainchar/maintype1Rsidestationary.png" id="5_nysjv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5q8yn"]
 animations = [{

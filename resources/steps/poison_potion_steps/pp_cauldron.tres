@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Step" load_steps=5 format=3 uid="uid://bxpw88si6ot1l"]
+
+[ext_resource type="Script" path="res://scripts/Step.gd" id="1_ih4ce"]
+[ext_resource type="Resource" uid="uid://gdfdu5ak5dtb" path="res://resources/items/poison_essence.tres" id="1_n5ho8"]
+[ext_resource type="Resource" uid="uid://b730jvgokythc" path="res://resources/items/cauldron.tres" id="2_q0ln5"]
+[ext_resource type="Resource" uid="uid://bmqu8auxxjsq5" path="res://resources/items/poison_potion.tres" id="3_u5yge"]
+
+[resource]
+script = ExtResource("1_ih4ce")
+ingredients = Array[Resource("res://scripts/Item.gd")]([ExtResource("1_n5ho8")])
+instrument = ExtResource("2_q0ln5")
+output = ExtResource("3_u5yge")

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://b730jvgokythc"]
+
+[ext_resource type="Texture2D" uid="uid://conbex1wdrrau" path="res://assests/art/Objects/Alchemy Equipment/cauldron/cauldron2a1mask.png" id="1_du0lp"]
+[ext_resource type="Script" path="res://scripts/Item.gd" id="1_ncwn6"]
+
+[resource]
+script = ExtResource("1_ncwn6")
+icon = ExtResource("1_du0lp")
+name = "Cauldron"

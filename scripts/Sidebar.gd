@@ -6,9 +6,6 @@ extends Control
 
 var orders_active := true
 
-func _ready():
-	start_orders() # TODO: this should not trigger the orders
-
 func start_orders():
 	orders.start()
 

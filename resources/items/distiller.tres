@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cny5vkn8gbwb3"]
+
+[ext_resource type="Script" path="res://scripts/Item.gd" id="1_5fpw2"]
+[ext_resource type="Texture2D" uid="uid://1ef5h71540n7" path="res://assests/art/Objects/distiller.png" id="1_gnj3y"]
+
+[resource]
+script = ExtResource("1_5fpw2")
+icon = ExtResource("1_gnj3y")
+name = "Distiller"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://byq6uc1jntn01"]
+
+[ext_resource type="Script" path="res://scripts/Item.gd" id="1_1dcy0"]
+[ext_resource type="Texture2D" uid="uid://b611ayt4jpy7u" path="res://assests/art/Objects/728/knife.png" id="1_jw8ca"]
+
+[resource]
+script = ExtResource("1_1dcy0")
+icon = ExtResource("1_jw8ca")
+name = "Cutting Board"

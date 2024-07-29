@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Step" load_steps=6 format=3 uid="uid://ddxpwjayryprx"]
+
+[ext_resource type="Script" path="res://scripts/Step.gd" id="1_d0qik"]
+[ext_resource type="Resource" uid="uid://c0ik20jnpb2ea" path="res://resources/items/frog_guts.tres" id="1_kot82"]
+[ext_resource type="Resource" uid="uid://b7od2m5cnl7wb" path="res://resources/items/night_shade.tres" id="2_tqm5o"]
+[ext_resource type="Resource" uid="uid://dir88arnlv0w5" path="res://resources/items/mortar.tres" id="3_lox1g"]
+[ext_resource type="Resource" uid="uid://cqwsxp0aec6c5" path="res://resources/items/poison_dust.tres" id="4_8m4qq"]
+
+[resource]
+script = ExtResource("1_d0qik")
+ingredients = Array[Resource("res://scripts/Item.gd")]([ExtResource("1_kot82"), ExtResource("2_tqm5o")])
+instrument = ExtResource("3_lox1g")
+output = ExtResource("4_8m4qq")

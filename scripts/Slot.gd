@@ -12,7 +12,8 @@ extends Button
 			button_icon.texture = null
 
 func _on_mouse_entered():
-	Tooltip.ItemPopup(Rect2i(Vector2i(global_position), Vector2i(size)), null)
+	if item != null:
+		Tooltip.ItemPopup(Rect2i(Vector2i(global_position), Vector2i(size)), item)
 
 func _on_mouse_exited():
 	Tooltip.HideItemPopup()

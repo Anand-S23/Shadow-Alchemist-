@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bmqu8auxxjsq5"]
+
+[ext_resource type="Texture2D" uid="uid://dseybd7fb31pw" path="res://assests/art/Objects/poison_potion.png" id="1_icsy7"]
+[ext_resource type="Script" path="res://scripts/Item.gd" id="1_qpf8e"]
+
+[resource]
+script = ExtResource("1_qpf8e")
+icon = ExtResource("1_icsy7")
+name = "Poison Potion"

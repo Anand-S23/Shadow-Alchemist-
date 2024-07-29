@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://b77shsaj1kac0"]
+
+[ext_resource type="Script" path="res://scripts/Recipe.gd" id="1_feeqy"]
+[ext_resource type="Texture2D" uid="uid://dseybd7fb31pw" path="res://assests/art/Objects/poison_potion.png" id="1_i5urh"]
+[ext_resource type="Resource" uid="uid://boofjrgoonjts" path="res://resources/steps/poison_potion_steps/pp_cutting_board.tres" id="2_xwcr2"]
+[ext_resource type="Resource" uid="uid://ddxpwjayryprx" path="res://resources/steps/poison_potion_steps/pp_motar.tres" id="3_5nqef"]
+[ext_resource type="Resource" uid="uid://d0o1hgvfq3pb8" path="res://resources/steps/poison_potion_steps/pp_distiller.tres" id="4_m71k8"]
+[ext_resource type="Resource" uid="uid://bxpw88si6ot1l" path="res://resources/steps/poison_potion_steps/pp_cauldron.tres" id="5_4i0u3"]
+
+[resource]
+script = ExtResource("1_feeqy")
+item_name = "Poison Potion"
+item_image = ExtResource("1_i5urh")
+steps = Array[Resource("res://scripts/Step.gd")]([ExtResource("2_xwcr2"), ExtResource("3_5nqef"), ExtResource("4_m71k8"), ExtResource("5_4i0u3")])

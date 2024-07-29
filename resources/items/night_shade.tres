@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://b7od2m5cnl7wb"]
+
+[ext_resource type="Texture2D" uid="uid://cx3h88l0c2skr" path="res://assests/art/Objects/ginapnight/ing/nightshade2.png" id="1_fevbr"]
+[ext_resource type="Script" path="res://scripts/Item.gd" id="1_koh7s"]
+
+[resource]
+script = ExtResource("1_koh7s")
+icon = ExtResource("1_fevbr")
+name = "Nightshade"
