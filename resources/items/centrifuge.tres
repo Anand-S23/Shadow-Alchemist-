@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bq8b8rut4u8dc"]
+
+[ext_resource type="Texture2D" uid="uid://dxadkk67p8f2p" path="res://assests/art/Objects/Alchemy Equipment/centrifuge1.png" id="1_f1i0r"]
+[ext_resource type="Script" path="res://scripts/Item.gd" id="1_qu48f"]
+
+[resource]
+script = ExtResource("1_qu48f")
+icon = ExtResource("1_f1i0r")
+name = "Centrifuge"

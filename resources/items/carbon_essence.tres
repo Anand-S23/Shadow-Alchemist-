@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://duoweckay48ef"]
+
+[ext_resource type="Texture2D" uid="uid://cuyvwdiec3ce1" path="res://assests/art/Objects/carbon_essence.png" id="1_kul48"]
+[ext_resource type="Script" path="res://scripts/Item.gd" id="1_mvodw"]
+
+[resource]
+script = ExtResource("1_mvodw")
+icon = ExtResource("1_kul48")
+name = "Carbon Essence"

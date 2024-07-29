@@ -10,7 +10,6 @@ var clickable_recipe := preload("res://scenes/ClickableRecipe.tscn")
 
 func _ready():
 	for recipe in recipies:
-		print(recipe, recipe.item_name, recipe.item_image)
 		var new_cr := clickable_recipe.instantiate()
 		recipe_list_container.add_child(new_cr)
 		new_cr.recipe = recipe

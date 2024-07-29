@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Step" load_steps=6 format=3 uid="uid://bjrk8u7wdpbxy"]
+
+[ext_resource type="Script" path="res://scripts/Step.gd" id="1_ka74a"]
+[ext_resource type="Resource" uid="uid://duoweckay48ef" path="res://resources/items/carbon_essence.tres" id="1_piw1r"]
+[ext_resource type="Resource" uid="uid://d04dw4kimv3aj" path="res://resources/items/ginger_essence.tres" id="2_5d3gy"]
+[ext_resource type="Resource" uid="uid://b730jvgokythc" path="res://resources/items/cauldron.tres" id="3_ilfa1"]
+[ext_resource type="Resource" uid="uid://dlbagsr8omgbg" path="res://resources/items/healing_potion.tres" id="4_gh1pu"]
+
+[resource]
+script = ExtResource("1_ka74a")
+ingredients = Array[Resource("res://scripts/Item.gd")]([ExtResource("1_piw1r"), ExtResource("2_5d3gy")])
+instrument = ExtResource("3_ilfa1")
+output = ExtResource("4_gh1pu")

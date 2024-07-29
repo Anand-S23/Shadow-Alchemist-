@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://d4grmuy8hekmw"]
+
+[ext_resource type="Script" path="res://scripts/Item.gd" id="1_rk86k"]
+[ext_resource type="Texture2D" uid="uid://cx52fymka2dwc" path="res://assests/art/Objects/ginapnight/ing/ginseng.png" id="1_xqyrc"]
+
+[resource]
+script = ExtResource("1_rk86k")
+icon = ExtResource("1_xqyrc")
+name = "Ginger"

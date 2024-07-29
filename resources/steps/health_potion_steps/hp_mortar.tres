@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Step" load_steps=6 format=3 uid="uid://c8mlbarl7tscj"]
+
+[ext_resource type="Script" path="res://scripts/Step.gd" id="1_jgm7u"]
+[ext_resource type="Resource" uid="uid://bpuemlb26ljsm" path="res://resources/items/coal.tres" id="1_shxcm"]
+[ext_resource type="Resource" uid="uid://d36ikfms2wlm2" path="res://resources/items/dried_apple.tres" id="2_55drd"]
+[ext_resource type="Resource" uid="uid://dir88arnlv0w5" path="res://resources/items/mortar.tres" id="3_00s6y"]
+[ext_resource type="Resource" uid="uid://duoweckay48ef" path="res://resources/items/carbon_essence.tres" id="4_ge43k"]
+
+[resource]
+script = ExtResource("1_jgm7u")
+ingredients = Array[Resource("res://scripts/Item.gd")]([ExtResource("1_shxcm"), ExtResource("2_55drd")])
+instrument = ExtResource("3_00s6y")
+output = ExtResource("4_ge43k")

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://bep3musaxs6t5"]
+
+[ext_resource type="Texture2D" uid="uid://xahhgrradr5x" path="res://assests/art/Objects/health_potion.png" id="1_mckxw"]
+[ext_resource type="Script" path="res://scripts/Recipe.gd" id="1_q6nni"]
+[ext_resource type="Resource" uid="uid://bsc1vbac3quoq" path="res://resources/steps/health_potion_steps/hp_cutting_board.tres" id="3_p5rd1"]
+[ext_resource type="Resource" uid="uid://tyoltp7mbb04" path="res://resources/steps/health_potion_steps/hp_centrifuge.tres" id="4_ao48k"]
+[ext_resource type="Resource" uid="uid://c8mlbarl7tscj" path="res://resources/steps/health_potion_steps/hp_mortar.tres" id="5_50ji4"]
+[ext_resource type="Resource" uid="uid://bjrk8u7wdpbxy" path="res://resources/steps/health_potion_steps/hp_cauldron.tres" id="6_wpvs8"]
+
+[resource]
+script = ExtResource("1_q6nni")
+item_name = "Health Potion"
+item_image = ExtResource("1_mckxw")
+steps = Array[Resource("res://scripts/Step.gd")]([ExtResource("3_p5rd1"), ExtResource("4_ao48k"), ExtResource("5_50ji4"), ExtResource("6_wpvs8")])

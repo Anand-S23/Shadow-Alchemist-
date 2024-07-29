@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://d36ikfms2wlm2"]
+
+[ext_resource type="Texture2D" uid="uid://ff2embv4t8la" path="res://assests/art/Objects/ginapnight/ing/driedapple2.png" id="1_ch64o"]
+[ext_resource type="Script" path="res://scripts/Item.gd" id="1_hir7n"]
+
+[resource]
+script = ExtResource("1_hir7n")
+icon = ExtResource("1_ch64o")
+name = "Dried Apple"

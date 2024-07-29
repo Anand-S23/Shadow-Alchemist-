@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://72rvki25elsr"]
+[gd_scene load_steps=4 format=3 uid="uid://72rvki25elsr"]
 
 [ext_resource type="Script" path="res://scripts/RecipieTab.gd" id="1_j5trk"]
 [ext_resource type="Resource" uid="uid://b77shsaj1kac0" path="res://resources/recipies/poison_potion.tres" id="2_oi51s"]
+[ext_resource type="Resource" uid="uid://bep3musaxs6t5" path="res://resources/recipies/health_potion.tres" id="3_cgjni"]
 
 [node name="Recipies" type="Control"]
 layout_mode = 3
@@ -9,30 +10,30 @@ anchors_preset = 0
 offset_right = 320.0
 offset_bottom = 830.0
 script = ExtResource("1_j5trk")
-recipies = Array[Resource("res://scripts/Recipe.gd")]([ExtResource("2_oi51s")])
+recipies = Array[Resource("res://scripts/Recipe.gd")]([ExtResource("2_oi51s"), ExtResource("3_cgjni")])
 
 [node name="RecipeList" type="ScrollContainer" parent="."]
 layout_mode = 2
 offset_right = 320.0
-offset_bottom = 375.0
+offset_bottom = 240.0
 
 [node name="ListContainer" type="VBoxContainer" parent="RecipeList"]
 layout_mode = 2
 
 [node name="SelectedLabel" type="Label" parent="."]
 layout_mode = 0
-offset_top = 375.0
+offset_top = 240.0
 offset_right = 320.0
-offset_bottom = 415.0
+offset_bottom = 280.0
 text = "Selected:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="RecipeView" type="ScrollContainer" parent="."]
 layout_mode = 2
-offset_top = 415.0
+offset_top = 280.0
 offset_right = 320.0
-offset_bottom = 830.0
+offset_bottom = 695.0
 
 [node name="ListContainer" type="VBoxContainer" parent="RecipeView"]
 layout_mode = 2

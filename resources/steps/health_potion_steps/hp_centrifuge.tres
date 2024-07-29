@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Step" load_steps=5 format=3 uid="uid://tyoltp7mbb04"]
+
+[ext_resource type="Script" path="res://scripts/Step.gd" id="1_mjm66"]
+[ext_resource type="Resource" uid="uid://cgxut4uha6gdn" path="res://resources/items/diced_ginger.tres" id="1_op0dy"]
+[ext_resource type="Resource" uid="uid://bq8b8rut4u8dc" path="res://resources/items/centrifuge.tres" id="2_bioh7"]
+[ext_resource type="Resource" uid="uid://d04dw4kimv3aj" path="res://resources/items/ginger_essence.tres" id="3_nymrx"]
+
+[resource]
+script = ExtResource("1_mjm66")
+ingredients = Array[Resource("res://scripts/Item.gd")]([ExtResource("1_op0dy")])
+instrument = ExtResource("2_bioh7")
+output = ExtResource("3_nymrx")
