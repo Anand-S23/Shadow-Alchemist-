@@ -1,0 +1,16 @@
+you: ...
+alchemist: You’re finally awake, you’ve been out for a week. We were worried that you would be taken away after your first fuck up as soon as you started.
+you: What happened?
+alchemist: You don’t remember you blew up the first batch of potions that they ordered, it makes sense under normal circumstances you would have been trained better but all the kids have been separated out now.
+alchemist: You became old enough for them to send you to make these potions and they expect you to learn on the fly.
+you: Who's they?
+alchemist: You don’t remember? I guess that explosion really hit you harder than we thought, or maybe it was when you smacked your head on the cauldron on the way down.
+alchemist: It’s been 3 years– we alchemists were everything, Estria – a nation built on alchemy.\
+We exis	start_orders()\
+ted for the sole purpose of creating the philosopher’s stone – through thousands of years our ancestors have been attempting to create it countless attempts through which we learned more and more of alchemy.
+alchemist: Our nation prospered and the people lived happily, through our research we came upon great discoveries that benefited the lives of the people of Estria.
+alchemist: Three years ago, something went wrong, an experiment failed catastrophically. It destroyed an entire city wiping out 150,000 people. That's when the people started  revolting, all incited by them.
+ORDER IN COMING...
+abe: It’s an order, kid you almost got sent away on your first time here don’t mess this up we’ll help you make the potion but you can’t afford another blunder.
+[signal arg="show_order"]
+abe: Try Pressing [TAB] to hide or show orders

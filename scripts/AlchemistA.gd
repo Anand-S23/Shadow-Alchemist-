@@ -12,7 +12,7 @@ func _ready():
 	walk_in()
 	
 func _on_interact():
-	pass
+	Dialogic.start("test_timeline")
 	
 func _physics_process(delta):
 	if position.x <= 55:
@@ -20,6 +20,8 @@ func _physics_process(delta):
 		if !started:
 			Dialogic.start("tut_entry_timelin")
 			started = true
+	elif vel > 0 and position.x >= 290:
+		queue_free()
 	
 	velocity.x = vel
 	move_and_slide()

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="DialogicGlossary" load_steps=2 format=3 uid="uid://dnfu5op6p77md"]
+
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Glossary/glossary_resource.gd" id="1_ac8j6"]
+
+[resource]
+script = ExtResource("1_ac8j6")
+entries = {
+"[TAB]": {
+"case_sensitive": true,
+"color": Color(0.218536, 0.559004, 0.601562, 1),
+"name": "[TAB]",
+"text": "",
+"title": "TAB"
+}
+}
+enabled = true
+_translation_id = ""
+_translation_keys = {}

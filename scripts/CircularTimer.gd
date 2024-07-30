@@ -10,19 +10,23 @@ extends Control
 @export var v_start = 0.3
 @export var v_end = 1.0
 
-@export var time_limit_in_seconds := 30
-var progress := 100
+@export var time_limit_in_seconds : int = 30:
+	set(value):
+		decrement_per_second = 100.0 / float(value)
+
+var progress: float = 100.0
+var current_time: float = 0.0
+var decrement_per_second: float = 0.0
 
 func _ready():
-	progress_bar.value = progress
+	progress_bar.min_value = 0
+	progress_bar.max_value = 100
+	progress_bar.value = 100
 
 func _process(delta):
-	progress = clamp(progress, 0, 100)	
+	progress = clamp(progress, 0, 100)
 	progress_bar.value = progress
 	update_color()
-
-func get_progress() -> int:
-	return progress
 
 func range_lerp(value, min1, max1, min2, max2):
 	var value_norm = inverse_lerp(min1, max1, value)
@@ -34,4 +38,5 @@ func update_color():
 	progress_bar.tint_progress.v = range_lerp(progress_bar.value, progress_bar.min_value, progress_bar.max_value, v_start, v_end)
 
 func _on_timer_timeout():
-	progress -= 1
+	current_time += 1.0
+	progress -= decrement_per_second

@@ -1,7 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://n6lyvvkr5qyj"]
+[gd_scene load_steps=18 format=3 uid="uid://n6lyvvkr5qyj"]
 
 [ext_resource type="Texture2D" uid="uid://bgmawtdq75t3t" path="res://assests/temp_asset_pack.png" id="1_q2eeb"]
 [ext_resource type="Texture2D" uid="uid://7v5itp3mvki6" path="res://assests/art/Textures/chosenfloorandwalls/woodwall2.png" id="2_k1xgr"]
+[ext_resource type="PackedScene" uid="uid://dqpxwl54pys7r" path="res://scenes/Alchemist.tscn" id="3_lqy21"]
+[ext_resource type="PackedScene" uid="uid://cqvb454v72df8" path="res://scenes/AlchemistB.tscn" id="4_e6ftn"]
 [ext_resource type="PackedScene" uid="uid://dpg6kbw4ddopd" path="res://scenes/Player.tscn" id="8_62a8g"]
 [ext_resource type="Texture2D" uid="uid://tgud0asx554p" path="res://assests/art/Textures/chosenfloorandwalls/stonewallmossysidec.png" id="9_7j7im"]
 [ext_resource type="Texture2D" uid="uid://4ntfibgyasuq" path="res://assests/art/Textures/chosenfloorandwalls/stonewall1c.png" id="10_uo62y"]
@@ -1363,6 +1365,12 @@ layer_0/tile_data = PackedInt32Array(-589843, 0, 0, -524307, 0, 1, -589842, 6553
 
 [node name="Items" type="Node" parent="." groups=["item_container"]]
 
+[node name="NPC" parent="." instance=ExtResource("3_lqy21")]
+position = Vector2(278, -1)
+
+[node name="NPC2" parent="." instance=ExtResource("4_e6ftn")]
+position = Vector2(26, -141)
+
 [node name="Player" parent="." instance=ExtResource("8_62a8g")]
 z_index = 10
 
@@ -1374,3 +1382,6 @@ layer_0/tile_data = PackedInt32Array(-720915, 2, 0, -655379, 2, 1, -720914, 6553
 [node name="MiniGameManager" parent="." instance=ExtResource("11_qkxyp")]
 
 [node name="Sidebar" parent="." instance=ExtResource("13_5ln1u")]
+visible = false
+order_count = 1
+time_limit_in_seconds = 120

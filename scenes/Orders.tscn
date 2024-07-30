@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://du8wfdxncxq8t"]
 
 [ext_resource type="Script" path="res://scripts/Orders.gd" id="1_sq6lf"]
-[ext_resource type="Resource" uid="uid://bh5b4pelp72ki" path="res://resources/recipies/test_potion_recipe.tres" id="2_m5fdv"]
+[ext_resource type="Resource" uid="uid://b77shsaj1kac0" path="res://resources/recipies/poison_potion.tres" id="2_wogqr"]
 
 [node name="Orders" type="Control"]
 layout_mode = 3
@@ -9,7 +9,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_sq6lf")
-recipies = Array[Resource("res://scripts/Recipe.gd")]([ExtResource("2_m5fdv")])
+recipies = Array[Resource("res://scripts/Recipe.gd")]([ExtResource("2_wogqr")])
 
 [node name="OrdersContainer" type="VBoxContainer" parent="."]
 layout_mode = 0

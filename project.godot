@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Dss Test"
-run/main_scene="res://scenes/Den.tscn"
+run/main_scene="res://scenes/Tutorial.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -26,11 +26,15 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"abe": "res://assests/art/Sprites/mainchar/abe.dch",
+"alchemist": "res://assests/dialogic/alchemist.dch",
 "test_character": "res://assests/dialogic/test_character.dch",
-"unit_test_character": "res://Tests/Resources/unit_test_character.dch"
+"unit_test_character": "res://Tests/Resources/unit_test_character.dch",
+"you": "res://assests/dialogic/you.dch"
 }
 directories/dtl_directory={
-"test_timeline": "res://assests/dialogic/test_timeline.dtl"
+"test_timeline": "res://assests/dialogic/test_timeline.dtl",
+"tut_entry_timelin": "res://assests/art/Sprites/mainchar/tut_entry_timelin.dtl"
 }
 variables={}
 layout/style_list=["res://assests/dialogic/MainStyle.tres"]
@@ -53,6 +57,8 @@ animations/join_default_length=0.5
 animations/leave_default_length=0.5
 animations/leave_default_wait=true
 animations/join_default_wait=true
+glossary/glossary_files=["res://assests/art/Sprites/gnome2/dict.tres"]
+glossary/default_color=Color(0.17337, 0.278488, 0.964844, 1)
 
 [editor_plugins]
 
