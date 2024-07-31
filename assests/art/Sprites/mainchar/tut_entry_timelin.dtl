@@ -1,5 +1,8 @@
 you: ...
 alchemist: You’re finally awake, you’ve been out for a week. We were worried that you would be taken away after your first fuck up as soon as you started.
+- What happended?
+- (Skip background lore)
+	jump tut_entry_timelin/lore
 you: What happened?
 alchemist: You don’t remember you blew up the first batch of potions that they ordered, it makes sense under normal circumstances you would have been trained better but all the kids have been separated out now.
 alchemist: You became old enough for them to send you to make these potions and they expect you to learn on the fly.
@@ -10,7 +13,16 @@ We exis	start_orders()\
 ted for the sole purpose of creating the philosopher’s stone – through thousands of years our ancestors have been attempting to create it countless attempts through which we learned more and more of alchemy.
 alchemist: Our nation prospered and the people lived happily, through our research we came upon great discoveries that benefited the lives of the people of Estria.
 alchemist: Three years ago, something went wrong, an experiment failed catastrophically. It destroyed an entire city wiping out 150,000 people. That's when the people started  revolting, all incited by them.
+label lore
 ORDER IN COMING...
 abe: It’s an order, kid you almost got sent away on your first time here don’t mess this up we’ll help you make the potion but you can’t afford another blunder.
 [signal arg="show_order"]
-abe: Try Pressing [TAB] to hide or show orders
+abe: Do you know remember how to make potions?
+- Yes
+	[signal arg="tutorial_skipped"]
+	jump tutorial
+- No
+abe: Press [TAB] to show or hide the side pane. Looks like you have to make a poison potion.
+abe: Click on the Recipes tab or press [2] to show the recipies for potions.
+[signal arg="tutorial_recipes"]
+label tutorial

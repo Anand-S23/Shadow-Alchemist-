@@ -1,6 +1,9 @@
 extends Button
 
 @onready var button_icon := $TextureRect
+@onready var background := $Background
+
+@export var disable_background := false
 
 @export var item : Item = null:
 	set(value):
@@ -17,3 +20,7 @@ func _on_mouse_entered():
 
 func _on_mouse_exited():
 	Tooltip.HideItemPopup()
+	
+func _ready():
+	if disable_background:
+		background.visible = false

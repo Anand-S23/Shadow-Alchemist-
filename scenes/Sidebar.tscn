@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://28e2tjv2gy6v"]
+[gd_scene load_steps=6 format=3 uid="uid://28e2tjv2gy6v"]
 
 [ext_resource type="PackedScene" uid="uid://du8wfdxncxq8t" path="res://scenes/Orders.tscn" id="1_eenia"]
 [ext_resource type="Script" path="res://scripts/Sidebar.gd" id="1_nx8ws"]
 [ext_resource type="PackedScene" uid="uid://72rvki25elsr" path="res://scenes/RecipieTab.tscn" id="3_5j2t4"]
+[ext_resource type="Resource" uid="uid://b77shsaj1kac0" path="res://resources/recipies/poison_potion.tres" id="3_keaqq"]
+[ext_resource type="Resource" uid="uid://bep3musaxs6t5" path="res://resources/recipies/health_potion.tres" id="4_d5w37"]
 
 [node name="Sidebar" type="Control"]
 layout_mode = 3
@@ -75,6 +77,7 @@ offset_bottom = 871.0
 layout_mode = 1
 offset_top = 5.0
 offset_bottom = 45.0
+recipies = Array[Resource("res://scripts/Recipe.gd")]([ExtResource("3_keaqq"), ExtResource("4_d5w37")])
 
 [node name="Recipies" parent="UI/Container/MainContainer" instance=ExtResource("3_5j2t4")]
 visible = false

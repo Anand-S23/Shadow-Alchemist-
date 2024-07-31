@@ -16,6 +16,7 @@ var steps: Array[Step]
 @export var selected_label: Label
 
 func _on_pressed():
+	Sidebar.toggle_timeline_for_first_click()
 	for child in view_container.get_children():
 		child.queue_free()
 		 

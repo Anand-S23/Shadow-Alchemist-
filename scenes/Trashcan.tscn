@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://der7b54dlutmb"]
+
+[ext_resource type="Script" path="res://scripts/Trashcan.gd" id="1_dtq6o"]
+[ext_resource type="Texture2D" uid="uid://dme2lr11k0qxa" path="res://assests/art/trashcan.png" id="1_gg43k"]
+[ext_resource type="PackedScene" uid="uid://ggq3fennnku3" path="res://scenes/Interactable.tscn" id="2_p61al"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ari42"]
+size = Vector2(17, 23)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xy604"]
+radius = 21.095
+
+[node name="Trashcan" type="StaticBody2D"]
+script = ExtResource("1_dtq6o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_gg43k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 2.5)
+shape = SubResource("RectangleShape2D_ari42")
+
+[node name="Interactable" parent="." instance=ExtResource("2_p61al")]
+item_name = "[E] Trashcan"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+shape = SubResource("CircleShape2D_xy604")

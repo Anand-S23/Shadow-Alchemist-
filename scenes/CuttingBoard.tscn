@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://bddlir7pjxoxo"]
+
+[ext_resource type="Texture2D" uid="uid://dlv6u0hevkoo7" path="res://assests/art/Objects/728/cuttingboard.png" id="1_w3uqj"]
+[ext_resource type="Script" path="res://scripts/CuttingBoard.gd" id="1_xv21i"]
+[ext_resource type="Texture2D" uid="uid://b611ayt4jpy7u" path="res://assests/art/Objects/728/knife.png" id="2_eqyry"]
+[ext_resource type="Script" path="res://scripts/Interactable.gd" id="3_1q2xf"]
+[ext_resource type="PackedScene" uid="uid://ciobp8xm1m847" path="res://scenes/Slot.tscn" id="5_co4pd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_woex3"]
+size = Vector2(46, 34)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y76nk"]
+radius = 51.2445
+
+[node name="CuttingBoard" type="StaticBody2D"]
+script = ExtResource("1_xv21i")
+
+[node name="Base" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_w3uqj")
+
+[node name="Knife" type="Sprite2D" parent="."]
+position = Vector2(17, 3)
+rotation = -0.349066
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_eqyry")
+
+[node name="Slot" parent="." instance=ExtResource("5_co4pd")]
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 24.0
+offset_bottom = 24.0
+scale = Vector2(0.5, 0.5)
+disable_background = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_woex3")
+
+[node name="Interactable" type="Area2D" parent="."]
+script = ExtResource("3_1q2xf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+shape = SubResource("CircleShape2D_y76nk")

@@ -10,6 +10,7 @@ length = 0.0
 radius = 17.0294
 
 [node name="AbstractItem" type="StaticBody2D"]
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_gldnd")
 
 [node name="ItemSprite" type="Sprite2D" parent="."]

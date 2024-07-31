@@ -1,9 +1,10 @@
 extends StaticBody2D
 
-@onready var player = get_tree().get_first_node_in_group('player')
-@onready var interactable: Interactable = $Interactable
-@onready var item_sprite: Sprite2D = $ItemSprite
-@export var item: Item
+@onready var item_sprite := $ItemSprite
+@onready var interactable :=  $Interactable
+@onready var player := get_tree().get_first_node_in_group("player")
+
+@export var item : Item
 
 func _ready():
 	if item != null:
@@ -17,4 +18,3 @@ func _on_interact():
 	if current_item != null:
 		player.drop_item()
 	player.add_item(item)
-	queue_free()

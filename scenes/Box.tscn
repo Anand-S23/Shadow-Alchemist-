@@ -1,12 +1,34 @@
-[gd_scene load_steps=2 format=3 uid="uid://bqecaxybje2n1"]
+[gd_scene load_steps=6 format=3 uid="uid://bqecaxybje2n1"]
+
+[ext_resource type="Texture2D" uid="uid://dybyenvcvynwn" path="res://assests/art/Objects/boxes/box1v2.png" id="1_8ehlq"]
+[ext_resource type="Script" path="res://scripts/Box.gd" id="1_e7sys"]
+[ext_resource type="PackedScene" uid="uid://ggq3fennnku3" path="res://scenes/Interactable.tscn" id="3_bo8ub"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5i7wx"]
+size = Vector2(52, 52)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jplyg"]
+radius = 57.0088
 
 [node name="Box" type="StaticBody2D"]
+script = ExtResource("1_e7sys")
 
 [node name="BoxTexture" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_8ehlq")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Panel" type="Panel" parent="."]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="ItemSprite" type="Sprite2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_5i7wx")
+
+[node name="Interactable" parent="." instance=ExtResource("3_bo8ub")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+shape = SubResource("CircleShape2D_jplyg")

@@ -44,6 +44,9 @@ func drop_item() -> void:
 	item_container.add_child(abstract_item)
 	hotbar.drop_item()
 
+func trash_item() -> void:
+	hotbar.drop_item()
+
 func disable_camera_movement() -> void:
 	camera.motion_enabled = false
 

@@ -8,6 +8,8 @@ extends Control
 @export var min_gen_time := 10
 @export var max_gen_time := 30
 @export var time_limit_in_seconds : int = 30
+@export var tutorial: bool = true
+var first_time_recipe := true
 
 var orders_active := true
 
@@ -29,6 +31,14 @@ func handle_signal(argument: String):
 	if argument == "show_order":
 		start_orders()
 		toggle_ui()
+	elif argument == "tutorial_skipped":
+		tutorial = false
+
+func toggle_timeline_for_first_click():
+	print("here", tutorial, first_time_recipe)
+	if tutorial and first_time_recipe:
+		first_time_recipe = false
+		#Dialogic.start("recipe_timeline")
 
 func _ready():
 	Dialogic.signal_event.connect(handle_signal)

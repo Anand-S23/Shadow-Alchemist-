@@ -33,6 +33,7 @@ directories/dch_directory={
 "you": "res://assests/dialogic/you.dch"
 }
 directories/dtl_directory={
+"recipe_timeline": "res://assests/dialogic/recipe_timeline.dtl",
 "test_timeline": "res://assests/dialogic/test_timeline.dtl",
 "tut_entry_timelin": "res://assests/art/Sprites/mainchar/tut_entry_timelin.dtl"
 }
